@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Imanga Lufungulo, actress, model and dancer based in New York City.">
+<style>[hidden]{display:none!important}img{max-width:100%}body{margin:0}</style>
+<title>Imanga Lufungulo</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap">
+<style>
+/* Layout: airy single column. Wide light-caps name, then the work edge to edge with no gutters between images. One light look, by choice. */
+:root {
+  --stone: #EEE9E2;
+  --stone-deep: #E3DCD2;
+  --ink: #1D1B18;
+  --dust: #8E877D;
+  --line: #D6CEC3;
+  --sand: #A88B66;
+  --f: "Jost", "Futura", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--stone); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body { background: var(--stone); color: var(--ink); font-family: var(--f); font-weight: 300; font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--stone); }
+a { color: inherit; text-decoration: none; }
+:focus-visible { outline: 1px solid var(--ink); outline-offset: 3px; }
+
+.pad { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+@media (min-width: 900px) { .pad { padding-left: max(56px, env(safe-area-inset-left, 0px)); padding-right: max(56px, env(safe-area-inset-right, 0px)); } }
+.inner { max-width: 1240px; margin: 0 auto; }
+
+/* Nav */
+.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--stone); }
+.nav .inner { display: flex; justify-content: flex-end; gap: 32px; padding-block: 22px; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; }
+.nav a { color: var(--dust); transition: color .2s; }
+.nav a:hover, .nav a:focus-visible { color: var(--ink); }
+
+/* Hero */
+.hero { padding-block: 48px 56px; text-align: center; }
+.name { margin: 0; font-weight: 300; font-size: clamp(30px, 6.4vw, 84px); letter-spacing: .26em; line-height: 1.1; margin-right: -.26em; text-wrap: balance; }
+.roles { margin: 18px 0 0; color: var(--dust); font-size: 14px; letter-spacing: .12em; }
+
+/* Media placeholders */
+.ph { position: relative; background: var(--stone-deep); max-width: 100%; display: flex; align-items: center; justify-content: center; color: var(--dust); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; text-align: center; padding: 16px; overflow: hidden; }
+.r-169 { aspect-ratio: 16 / 9; }
+.r-34 { aspect-ratio: 3 / 4; }
+.r-45 { aspect-ratio: 4 / 5; }
+.r-916 { aspect-ratio: 9 / 16; }
+.r-239 { aspect-ratio: 2.39 / 1; }
+.play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity .3s; }
+.play span { width: 64px; height: 64px; border-radius: 50%; border: 1px solid var(--ink); display: flex; align-items: center; justify-content: center; color: var(--ink); font-size: 14px; padding-left: 4px; }
+.clip:hover .play, .clip:focus-visible .play { opacity: 1; }
+
+.cap { display: flex; justify-content: space-between; gap: 8px 24px; flex-wrap: wrap; padding-top: 12px; font-size: 14px; }
+.cap .t { letter-spacing: .08em; text-transform: uppercase; font-weight: 400; }
+.cap .d { color: var(--dust); }
+
+.box { position: relative; background: var(--stone-deep); max-width: 100%; overflow: hidden; }
+.box > img, .box > video { display: block; width: 100%; height: 100%; object-fit: cover; background: #111; }
+.box > video { object-fit: contain; }
+.r-23 { aspect-ratio: 2 / 3; }
+.r-32 { aspect-ratio: 3 / 2; }
+.acting { display: grid; grid-template-columns: minmax(0, 1fr); gap: 48px; }
+.acting .stack { display: flex; flex-direction: column; gap: 32px; }
+@media (min-width: 800px) { .acting { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 32px; align-items: start; } .acting .full { grid-column: 1 / -1; } }
+.grid2 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; }
+.band .w { grid-column: 1 / -1; }
+@media (max-width: 799px) { .band .p { grid-column: 1 / -1; } }
+@media (min-width: 800px) { .band .p { flex: 0.75 1 0; } .band .w { flex: 1.5 1 0; } }
+.heads { padding-bottom: 120px; }
+
+/* Feature clip under the name */
+.feature { padding-bottom: 120px; }
+.band { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0; }
+.band .still { grid-column: 1 / -1; }
+.band video { cursor: pointer; object-fit: cover; }
+@media (min-width: 800px) { .band { display: flex; } .band > * { min-width: 0; } .band .v { flex: 0.5625 1 0; } .band .still { flex: 1.7778 1 0; } }
+
+/* Sections */
+.sec { padding-block: 0 120px; }
+.sec h2 { margin: 0 0 28px; font-weight: 400; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: var(--dust); }
+
+.two { display: grid; grid-template-columns: minmax(0, 1fr); gap: 48px; }
+@media (min-width: 800px) { .two { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; } .two .wide { grid-column: 1 / -1; } }
+
+/* Edge-to-edge grids, no gaps */
+.grid3 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; }
+@media (min-width: 800px) { .grid3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.grid3 .ph { border: 0.5px solid var(--stone); }
+.dance { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; }
+@media (min-width: 600px) { .dance { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.dance .ph { border: 0.5px solid var(--stone); }
+.dance-cap { padding-top: 12px; }
+
+.film-text { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; padding-top: 20px; }
+@media (min-width: 800px) { .film-text { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; } }
+.film-title { margin: 0; font-weight: 400; font-size: 22px; letter-spacing: .12em; text-transform: uppercase; }
+.film-syn { margin: 0; color: var(--dust); max-width: 52ch; }
+
+/* Contact */
+.contact { padding-block: 40px 96px; border-top: 1px solid var(--line); }
+.contact .inner { display: grid; grid-template-columns: minmax(0, 1fr); gap: 48px; }
+@media (min-width: 900px) { .contact .inner { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 80px; padding-top: 40px; } }
+.contact h2 { margin: 0; font-weight: 300; font-size: clamp(26px, 3.2vw, 38px); letter-spacing: .14em; text-transform: uppercase; line-height: 1.25; }
+.mail { margin-top: 28px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.mail span { user-select: all; word-break: break-all; }
+.copy { background: none; border: 0; border-bottom: 1px solid var(--line); padding: 2px 0; font: inherit; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--dust); cursor: pointer; }
+.copy:hover { color: var(--ink); border-color: var(--ink); }
+
+form { display: flex; flex-direction: column; gap: 28px; }
+.f2 { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; }
+@media (min-width: 600px) { .f2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--dust); }
+.field input, .field textarea { width: 100%; background: transparent; border: 0; border-bottom: 1px solid var(--line); padding: 8px 0; font: inherit; font-size: 17px; color: var(--ink); outline: none; border-radius: 0; transition: border-color .2s; }
+.field textarea { resize: vertical; min-height: 110px; }
+.field input:focus, .field textarea:focus { border-bottom-color: var(--ink); }
+.field input::placeholder, .field textarea::placeholder { color: #B5ADA2; }
+.err { font-size: 13px; color: #9A4B2F; }
+.send-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.send { background: var(--ink); color: var(--stone); border: 0; padding: 15px 44px; font: inherit; font-size: 13px; font-weight: 400; letter-spacing: .2em; text-transform: uppercase; cursor: pointer; transition: background .2s; }
+.send:hover { background: var(--sand); }
+.status { font-size: 14px; color: var(--dust); }
+
+footer .inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-block: 28px 36px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--dust); }
+footer a:hover { color: var(--ink); }
+</style>
+</head>
+<body>
+
+
+<header class="nav pad" id="top">
+  <nav class="inner" aria-label="Primary">
+    <a href="#top">Home</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero pad">
+    <h1 class="name">IMANGA LUFUNGULO</h1>
+    <p class="roles">Actress | Model | Dancer<br>NYC</p>
+  </section>
+
+  <section class="heads" aria-label="Headshots">
+    <div class="grid2">
+      <div class="box r-23"><img src="media/portrait-smile.jpg" alt="Imanga smiling in a black tank top and jeans against a white wall"></div>
+      <div class="box r-23"><img src="media/portrait-three-quarter.jpg" alt="Headshot of Imanga, looking at the camera"></div>
+      <div class="box r-23"><img src="media/portrait-closeup.jpg" alt="Close-up headshot of Imanga"></div>
+    </div>
+  </section>
+
+  <section class="feature pad" aria-label="Moncler AW26">
+    <div class="inner">
+      <div class="band">
+        <div class="box r-916 v"><video class="loop" muted loop playsinline preload="metadata" poster="media/moncler-1-poster.jpg" src="media/moncler-1.mp4" aria-label="Moncler AW26 campaign clip. Tap for sound."></video></div>
+        <div class="box r-169 still"><img src="media/moncler-still.jpg" alt="Moncler AW26 campaign: a figure in a purple puffer coat surrounded by dancers in black"></div>
+        <div class="box r-916 v"><video class="loop" muted loop playsinline preload="metadata" poster="media/moncler-2-poster.jpg" src="media/moncler-2.mp4" aria-label="Pioneers in Moncler clip. Tap for sound."></video></div>
+      </div>
+      <div class="cap"><span class="t">Moncler AW26</span><span class="d">Campaign dancer</span></div>
+    </div>
+  </section>
+
+  <section class="sec pad" aria-labelledby="h-acting">
+    <div class="inner">
+      <h2 id="h-acting">Acting</h2>
+      <div class="acting">
+        <figure style="margin:0">
+          <div class="box r-23"><img src="media/luke-green-poster.jpg" alt="Poster for Killing Luke Green, starring Imanga Lufungulo"></div>
+          <figcaption class="cap"><span class="t">Killing Luke Green</span><span class="d">Lead · dir. Thomas J. West</span></figcaption>
+        </figure>
+        <div class="stack">
+          <figure style="margin:0">
+            <div class="box r-169"><video controls preload="none" playsinline poster="media/humble-era-ep1-poster.jpg" src="media/humble-era-ep1.mp4"></video></div>
+            <figcaption class="cap"><span class="t">Humble Era · Episode 1</span><span class="d">Anya, lead · dir. Lourdes Rodriguez</span></figcaption>
+          </figure>
+          <figure style="margin:0">
+            <div class="box r-169"><video controls preload="none" playsinline poster="media/humble-era-ep2-poster.jpg" src="media/humble-era-ep2.mp4"></video></div>
+            <figcaption class="cap"><span class="t">Humble Era · Episode 2</span><span class="d">Anya, lead · dir. Lourdes Rodriguez</span></figcaption>
+          </figure>
+        </div>
+        <figure class="full" style="margin:0">
+          <div class="box r-169"><video controls preload="none" playsinline poster="media/cherry-orchard-poster.jpg" src="media/cherry-orchard.mp4"></video></div>
+          <figcaption class="cap"><span class="t">The Cherry Orchard</span><span class="d">dir. Akeila March</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec pad" aria-labelledby="h-dance" hidden>
+    <div class="inner">
+      <h2 id="h-dance">Dance</h2>
+      <div class="dance">
+        <a class="clip" href="#h-dance"><div class="ph r-916">Dance clip<span class="play" aria-hidden="true"><span>&#9654;</span></span></div></a>
+        <a class="clip" href="#h-dance"><div class="ph r-916">Dance clip<span class="play" aria-hidden="true"><span>&#9654;</span></span></div></a>
+        <a class="clip" href="#h-dance"><div class="ph r-916">Dance clip<span class="play" aria-hidden="true"><span>&#9654;</span></span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-model">
+    <div class="inner pad"><h2 id="h-model">Modeling</h2></div>
+    <div class="band">
+      <div class="box r-34 p"><img src="media/court-pink.jpg" alt="Imanga in a pink crop top and cargo pants holding a basketball against a pink railing" loading="lazy"></div>
+      <div class="box r-32 w"><img src="media/onyx-90.jpg" alt="Onyx team shoot: Imanga in a pink top, front row of the group" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section class="sec pad" aria-labelledby="h-films">
+    <div class="inner">
+      <h2 id="h-films">Films</h2>
+      <div class="box r-169"><video controls preload="none" playsinline poster="media/all-for-the-vlog-poster.jpg" src="media/all-for-the-vlog.mp4"></video></div>
+      <div class="film-text">
+        <h3 class="film-title">Boat Vlog</h3>
+        <p class="film-syn">A film by Imanga Lufungulo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact pad" id="contact" aria-labelledby="h-contact">
+    <div class="inner">
+      <div>
+        <h2 id="h-contact">Get in touch</h2>
+        <div class="mail">
+          <span id="addr">ImangaLufunglo@gmail.com</span>
+          <button class="copy" id="copy" type="button">Copy</button>
+        </div>
+      </div>
+      <form id="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label>Leave empty <input name="bot-field"></label></p>
+        <div class="f2">
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" placeholder="Jordan Reyes"></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" placeholder="jordan@studio.com"></div>
+        </div>
+        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" placeholder="Project, dates, and location"></textarea></div>
+        <div class="send-row">
+          <span class="status" id="status" role="status"></span>
+          <button class="send" type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="pad">
+  <div class="inner">
+    <span>&copy; 2026 Imanga Lufungulo</span>
+    <a href="https://www.instagram.com/" rel="noopener">Instagram</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var copy = document.getElementById('copy');
+  var addr = document.getElementById('addr');
+  copy.addEventListener('click', function () {
+    function selectIt() {
+      var r = document.createRange(); r.selectNodeContents(addr);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      copy.textContent = 'Selected';
+    }
+    try { navigator.clipboard.writeText(addr.textContent).then(function () { copy.textContent = 'Copied'; }, selectIt); }
+    catch (e) { selectIt(); }
+    setTimeout(function () { copy.textContent = 'Copy'; }, 1800);
+  });
+
+  var form = document.getElementById('form');
+  var status = document.getElementById('status');
+  function setErr(input, msg) {
+    var f = input.closest('.field');
+    var old = f.querySelector('.err'); if (old) old.remove();
+    if (msg) { var e = document.createElement('span'); e.className = 'err'; e.textContent = msg; f.appendChild(e); }
+  }
+  ['f-name', 'f-email', 'f-msg'].forEach(function (id) {
+    document.getElementById(id).addEventListener('input', function () { setErr(this, ''); });
+  });
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var n = document.getElementById('f-name'), em = document.getElementById('f-email'), m = document.getElementById('f-msg');
+    var ok = true;
+    if (!n.value.trim()) { setErr(n, 'Add your name.'); ok = false; }
+    if (!/^\S+@\S+\.\S+$/.test(em.value.trim())) { setErr(em, 'Add an email to reply to.'); ok = false; }
+    if (!m.value.trim()) { setErr(m, 'Add a short message.'); ok = false; }
+    if (!ok) { status.textContent = ''; return; }
+    status.textContent = 'Sending…';
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(form)).toString() })
+      .then(function (r) { if (!r.ok) throw 0; form.reset(); status.textContent = 'Sent. Thank you.'; })
+      .catch(function () { status.textContent = 'That didn’t go through. Email me directly instead.'; });
+  });
+})();
+</script>
+<script>
+(function () {
+  var still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('video.loop').forEach(function (v) {
+    if (!still) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+    v.addEventListener('click', function () {
+      if (v.paused) { v.play().catch(function () {}); return; }
+      v.muted = !v.muted;
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
